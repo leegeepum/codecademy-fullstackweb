@@ -1,51 +1,43 @@
-const getUserChoice = (userInput='BOMB') => {
-    userInput = userInput.toLowerCase();
-
-    if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
-        return userInput;
-    }
-
-    return userInput;
-}
-
-const getComputerChoice = () => {
-    const num = Math.floor(Math.random() * 3);
-
-    switch (num) {
-        case 0:
-            return 'rock';
-        case 1:
-            return 'paper';
-        case 2:
-            return 'scissors';
+const getSleepHours = (day) => {
+    switch (day) {
+        case 'monday':
+            return 8;
+        case 'tuesday':
+            return 7;
+        case 'wednesday':
+            return 6;
+        case 'thursday':
+            return 7;
+        case 'friday':
+            return 8;
+        case 'saturday':
+            return 4;
+        case 'sunday':
+            return 9;
         default:
-            return '';
+            return 8;
     }
 }
 
-const determineWinner = (userChoice, computerChoice) => {
+const getActualSleepHours = () => {
+    const totalHours = getSleepHours('monday') + getSleepHours('tuesday') + getSleepHours('wednesday') + getSleepHours('thursday') + getSleepHours('friday') + getSleepHours('saturday') + getSleepHours('sunday');
 
-    if (userChoice === 'bomb') {
-        return 'User is the winner no matter what!';
-    } else if (userChoice === computerChoice) {
-        return `user: ${userChoice} / comp: ${computerChoice} / Tied!`;
-    } else if (userChoice === 'rock') {
-        if (computerChoice === 'paper') {
-            return `user: ${userChoice} / comp: ${computerChoice} / Computer is the winner!`;
-        } else if (computerChoice === 'scissors') {
-            return `user: ${userChoice} / comp: ${computerChoice} / User is the winner!`;
-        }
-    } else if (userChoice === 'scissors') {
-        if (computerChoice === 'rock') {
-            return `user: ${userChoice} / comp: ${computerChoice} / Computer is the winner!`;
-        } else if (computerChoice === 'paper') {
-            return `user: ${userChoice} / comp: ${computerChoice} / User is the winner!`;
-        }
+    return totalHours;
+}
+
+const getIdealSleepHours = (idealHours=8) => idealHours * 7;
+
+const calculateSleepDebt = () => {
+    const actualSleepHours = getActualSleepHours();
+    const idealSleepHours = getIdealSleepHours(9);
+
+    if (actualSleepHours === idealSleepHours) {
+        console.log(`Perfect amount of sleep! You slept ${idealSleepHours}!`);
+    } else if (actualSleepHours > idealSleepHours) {
+        console.log(`Too much sleep! You slept ${actualSleepHours - idealSleepHours} hours more than you need to!`);
+    } else {
+        console.log(`You need more sleep! Please sleep ${idealSleepHours - actualSleepHours} more hours!`);
     }
 }
 
-const playGame = (userChoice=getUserChoice(), computerChoice=getComputerChoice()) => {
-    console.log(determineWinner(userChoice, computerChoice));
-}
-
-playGame();
+calculateSleepDebt();
