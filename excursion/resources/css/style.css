@@ -1,0 +1,47 @@
+body {
+  background-color: black;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
+video {
+  margin-top: 10px;
+}
+
+a {
+  color: aquamarine;
+  font-size: 16px;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 42px;
+}
+
+p {
+  font-size: 21px;
+  color: gray;
+}
+
+footer p {
+  text-align: right;
+  margin: 30px 10px;
+}
+
+#camp-site {
+  width: 80%;
+  height: 50%;
+}
+
+#icon {
+  width: 10%;
+  height: 10%;
+}
