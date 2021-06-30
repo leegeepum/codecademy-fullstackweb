@@ -1,2 +1,8 @@
-# codecademy-fullstackweb
- codecademy full stack web development journey
+# My Website Style Guide
+
+This is to test my skills regarding:
+
+- colors
+- typography
+- positioning
+  for different elements.
