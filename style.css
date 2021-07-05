@@ -1,0 +1,23 @@
+body {
+  background-color: rgb(255, 120, 71);
+  text-align: center;
+  color: rgb(69, 68, 68);
+}
+
+#buttonClick,
+#buttonWheel {
+  margin: 10px auto;
+  padding: 20px;
+  border: 1px black solid;
+  border-radius: 50px;
+  font-size: x-large;
+  color: white;
+}
+
+#buttonClick {
+  background-color: rgb(0, 0, 138);
+}
+
+#buttonWheel {
+  background-color: rgb(186, 143, 0);
+}
