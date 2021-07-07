@@ -1,2 +1,12 @@
-# codecademy-fullstackweb
- codecademy full stack web development journey
+# My Project: Piano Player
+
+## Skills
+
+- HTML
+  - Exclude: media control
+- CSS
+  - Exclude: responsive design
+- Javascript
+  - Exclude:
+    - modules
+    - async/await
