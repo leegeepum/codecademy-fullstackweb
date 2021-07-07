@@ -1,135 +1,80 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background: #ffc63f;
+  background-color: rgb(250, 189, 76);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
-.title {
-  font-size: 36px;
-  margin-top: 10px;
-  margin-bottom: 0px;
-  padding: 0;
-  color: #141c3a;
+
+h1 {
   text-transform: uppercase;
-  letter-spacing: 2px;
-  text-align: center;
+  font-size: 50px;
+  margin-bottom: 0;
 }
-#demo {
-  text-align: center;
-  font-size: 18px;
-  margin-top: 15px;
-  color: #141c3a;
-  letter-spacing: 1px;
+
+h2 {
+  font-size: small;
+  font-weight: lighter;
   font-style: italic;
+  margin: 30px auto;
 }
-.piano {
-  width: 305px;
-  height: 210px;
-  display: block;
-  margin: 0 auto;
-  background-color: #fd4d3f;
-  margin-top: 30px;
+
+.key-area {
+  background-color: tomato;
+  width: 300px;
+  margin: 50px auto;
+  height: 215px;
 }
+
 .key {
-  width: 30px;
-  height: 200px;
   display: inline-block;
-  border: solid #141c3a 2px;
   box-shadow: 2px 5px;
+  width: 30px;
   background-color: white;
-  color: #141c3a;
+  color: rgb(0, 0, 46);
+  height: 200px;
 }
-.black-key {
+
+.sharp {
+  display: inline-block;
+  background-color: rgb(0, 0, 46);
+  color: white;
   width: 25px;
   height: 100px;
-  display: inline-block;
-  background-color: #141c3a;
-  color: white;
   position: absolute;
-  margin-left: -12px;
-  padding: 0px;
+  margin-left: -15px;
 }
-.keynote {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  display: block;
-  margin: 0 auto;
-  margin-top: 175px;
-  color: #141c3a;
+
+.key-letter {
+  margin-top: 170px;
 }
-.black-keynote {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  display: block;
-  margin: 0 auto;
-  margin-top: 75px;
+
+.key-sharp-letter {
+  margin-top: 65px;
 }
-#lyrics {
-  width: 400px;
-  height: 240px;
-  display: block;
-  margin: 0 auto;
-  padding-left: 20px;
-  margin-top: 50px;
-  background-color: #fd4d3f;
+
+.lyric-area {
+  background-color: rgb(249, 83, 53);
+  width: 60%;
+  margin: 50px auto;
+  padding: 30px auto;
 }
-#column-one,
-#column-two,
-#column-three,
-#column-four,
-#column-five,
-#column-six,
-#column-optional {
-  width: 90px;
+
+.lyric-boxes {
   display: inline-block;
-  text-align: center;
-  margin-top: 30px;
 }
-#column-optional {
-  display: none;
-}
-#word-one,
-#word-two,
-#word-three,
-#word-four,
-#word-five,
-#word-six,
-#word-optional {
+
+.lyrics {
   background-color: white;
-  width: 90px;
-  height: 25px;
-  padding-top: 10px;
-  letter-spacing: 5px;
-  color: #141c3a;
+  padding: 15px 20px;
 }
-#letter-note-one,
-#letter-note-two,
-#letter-note-three,
-#letter-note-four,
-#letter-note-five,
-#letter-note-six,
-#letter-note-optional {
+
+.notes {
   color: white;
-  width: 25px;
-  height: 25px;
-  margin-top: 15px;
-  margin-left: 35px;
 }
-#first-next-line,
-#second-next-line,
-#third-next-line,
-#fourth-next-line {
-  width: 80px;
-  height: 40px;
-  font-size: 16px;
-  position: absolute;
-  margin-top: 30px;
-  margin-left: 10px;
-  border: none;
-  background-color: #ffc63f;
-  color: #141c3a;
-  letter-spacing: 1px;
-  cursor: pointer;
+
+.button {
+  background-color: orange;
+  padding: 2px;
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 15px;
 }

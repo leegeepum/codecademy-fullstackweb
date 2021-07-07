@@ -1,105 +1,103 @@
-// The keys and notes variables store the piano keys
-const keys = ['c-key', 'd-key', 'e-key', 'f-key', 'g-key', 'a-key', 'b-key', 'high-c-key', 'c-sharp-key', 'd-sharp-key', 'f-sharp-key', 'g-sharp-key', 'a-sharp-key'];
+// variables
+const keys = ['key-c', 'key-csharp', 'key-d', 'key-dsharp', 'key-e', 'key-f', 'key-fsharp', 'key-g', 'key-gsharp', 'key-a', 'key-asharp', 'key-b', 'key-cc']
 
-const notes = [];
-keys.forEach(function (key) {
-  notes.push(document.getElementById(key));
-  console.log(key);
+const keyList = [];
+
+const lyricOne = document.getElementById('lyric-one');
+const noteOne = document.getElementById('note-one');
+const lyricTwo = document.getElementById('lyric-two');
+const noteTwo = document.getElementById('note-two');
+const lyricThree = document.getElementById('lyric-three');
+const noteThree = document.getElementById('note-three');
+const lyricFour = document.getElementById('lyric-four');
+const noteFour = document.getElementById('note-four');
+const lyricFive = document.getElementById('lyric-five');
+const noteFive = document.getElementById('note-five');
+const lyricSix = document.getElementById('lyric-six');
+const noteSix = document.getElementById('note-six');
+const lyricSeven = document.getElementById('lyric-seven')
+const noteSeven = document.getElementById('note-seven');
+
+const buttonOne = document.getElementById('button-one');
+const buttonTwo = document.getElementById('button-two');
+const buttonThree = document.getElementById('button-three');
+const buttonFour = document.getElementById('button-four');
+// const buttonFive = document.getElementById('button-five');
+
+
+// LIST - TARGET ELEMENTS
+
+// each piano key
+keys.forEach(key => {
+  keyList.push(document.getElementById(key));
 })
-console.log(notes);
-// Write named functions that change the color of the keys below
-const keyPlay = (event) => {
+
+
+// HIDDEN
+buttonTwo.hidden = true;
+buttonThree.hidden = true;
+buttonFour.hidden = true;
+// buttonFive.hidden = true;
+lyricSeven.hidden = true;
+noteSeven.hidden = true;
+
+// DOM MANIPULATION
+// WHAT
+// piano key background to tomato
+const keyDown = event => {
   event.target.style.backgroundColor = 'tomato';
-  console.log(event);
 }
-const keyReturn = (event) => {
+// piano key background to normal
+const keyUp = event => {
   event.target.style.backgroundColor = '';
-  console.log(event);
-}
-// Write a named function with event handler properties
-let eventAssignment = (note) => {
-  note.addEventListener('mousedown', keyPlay);
-  note.addEventListener('mouseup', keyReturn);
-  console.log(note);
 }
 
-// Write a loop that runs the array elements through the function
-notes.forEach(eventAssignment);
-
-// These variables store the buttons that progress the user through the lyrics
-let nextOne = document.getElementById('first-next-line');
-let nextTwo = document.getElementById('second-next-line');
-let nextThree = document.getElementById('third-next-line');
-let startOver = document.getElementById('fourth-next-line');
-
-// This variable stores the '-END' lyric element
-let lastLyric = document.getElementById('column-optional');
-
-// These statements are "hiding" all the progress buttons, but the first one
-nextTwo.hidden = true;
-nextThree.hidden = true;
-startOver.hidden = true;
-
-// Write anonymous event handler property and function for the first progress button
-nextOne.addEventListener('click', () => {
-  nextTwo.hidden = false;
-  nextOne.hidden = true;
-  document.getElementById('letter-note-five').innerHTML = 'D';
-  document.getElementById('letter-note-six').innerHTML = 'C';
-})
-
-// Write anonymous event handler property and function for the second progress button
-nextTwo.addEventListener('click', () => {
-  nextThree.hidden = false;
-  nextTwo.hidden = true;
-
-  document.getElementById('word-five').innerHTML = 'DEAR';
-  document.getElementById('word-six').innerHTML = 'FRI-';
-
-  document.getElementById('letter-note-three').innerHTML = 'G';
-  document.getElementById('letter-note-four').innerHTML = 'E';
-  document.getElementById('letter-note-five').innerHTML = 'C';
-  document.getElementById('letter-note-six').innerHTML = 'B';
-
-  lastLyric.style.display = 'inline-block';
-})
-
-// Write anonymous event handler property and function for the third progress button
-nextThree.addEventListener('click', () => {
-  startOver.hidden = false;
-  nextThree.hiden = true;
-
-  document.getElementById('word-one').innerHTML = 'HAP-';
-  document.getElementById('word-two').innerHTML = 'PY';
-  document.getElementById('word-three').innerHTML = 'BIRTH';
-  document.getElementById('word-four').innerHTML = 'DAY';
-  document.getElementById('word-five').innerHTML = 'TO';
-  document.getElementById('word-six').innerHTML = 'YOU!';
-
-  document.getElementById('letter-note-one').innerHTML = 'F';
-  document.getElementById('letter-note-two').innerHTML = 'F';
-  document.getElementById('letter-note-three').innerHTML = 'E';
-  document.getElementById('letter-note-four').innerHTML = 'C';
-  document.getElementById('letter-note-five').innerHTML = 'D';
-  document.getElementById('letter-note-six').innerHTML = 'C';
-
-  lastLyric.style.display = 'none';
-})
-
-// This is the event handler property and function for the startOver button
-startOver.onclick = function () {
-  nextOne.hidden = false;
-  startOver.hidden = true;
-  document.getElementById('word-one').innerHTML = 'HAP-';
-  document.getElementById('letter-note-one').innerHTML = 'G';
-  document.getElementById('word-two').innerHTML = 'PY';
-  document.getElementById('letter-note-two').innerHTML = 'G';
-  document.getElementById('word-three').innerHTML = 'BIRTH-';
-  document.getElementById('letter-note-three').innerHTML = 'A';
-  document.getElementById('word-four').innerHTML = 'DAY';
-  document.getElementById('letter-note-four').innerHTML = 'G';
-  document.getElementById('word-five').innerHTML = 'TO';
-  document.getElementById('letter-note-five').innerHTML = 'C';
-  document.getElementById('word-six').innerHTML = 'YOU!';
-  document.getElementById('letter-note-six').innerHTML = 'B';
+// WHEN
+// pinao key up/down
+const keyPlay = play => {
+  play.addEventListener('mousedown', keyDown);
+  play.addEventListener('mouseup', keyUp);
 }
+// buttonOne click
+buttonOne.addEventListener('click', () => {
+  buttonOne.hidden = true;
+  buttonTwo.hidden = false;
+  noteFive.innerHTML = 'D';
+  noteSix.innerHTML = 'C';
+})
+//buttonTwo click
+buttonTwo.addEventListener('click', () => {
+  buttonTwo.hidden = true;
+  buttonThree.hidden = false;
+  noteThree.innerHTML = 'G';
+  noteFour.innerHTML = 'E';
+  noteFive.innerHTML = 'C';
+  noteSix.innerHTML = 'B';
+  noteSeven.hidden = false;
+  lyricFive.innerHTML = 'DEAR';
+  lyricSix.innerHTML = 'FRI-';
+  lyricSeven.hidden = false;
+})
+// buttonThree click
+buttonThree.addEventListener('click', () => {
+  buttonThree.hidden = true;
+  buttonFour.hidden = false;
+  noteSeven.hidden = true;
+  lyricSeven.hidden = true;
+  noteOne.innerHTML = 'F';
+  noteTwo.innerHTML = 'F';
+  noteThree.innerHTML = 'E';
+  noteFour.innerHTML = 'C';
+  noteFive.innerHTML = 'D';
+  noteSix.innerHTML = 'C';
+  lyricOne.innerHTML = 'HAP-';
+  lyricTwo.innerHTML = 'PY';
+  lyricThree.innerHTML = 'BIRTH';
+  lyricFour.innerHTML = 'DAY';
+  lyricFive.innerHTML = 'TO';
+  lyricSix.innerHTML = 'YOU!';
+})
+
+
+// WHERE
+keyList.forEach(keyPlay);

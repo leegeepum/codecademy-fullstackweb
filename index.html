@@ -2,90 +2,108 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PIANO PLAYER</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
-
   <body>
-    <p class="title">Piano Player</p>
-    <p id="demo">Follow the song below to play the piano.</p>
-    <section class="piano">
-      <section id="c-key" class="key">
-        <section class="keynote">C</section>
-      </section>
-      <section id="c-sharp-key" class="black-key">
-        <section class="black-keynote">C#</section>
-      </section>
-      <section id="d-key" class="key">
-        <section class="keynote">D</section>
-      </section>
-      <section id="d-sharp-key" class="black-key">
-        <section class="black-keynote">D#</section>
-      </section>
-      <section id="e-key" class="key">
-        <section class="keynote">E</section>
-      </section>
-      <section id="f-key" class="key">
-        <section class="keynote">F</section>
-      </section>
-      <section id="f-sharp-key" class="black-key">
-        <section class="black-keynote">F#</section>
-      </section>
-      <section id="g-key" class="key">
-        <section class="keynote">G</section>
-      </section>
-      <section id="g-sharp-key" class="black-key">
-        <section class="black-keynote">G#</section>
-      </section>
-      <section id="a-key" class="key">
-        <section class="keynote">A</section>
-      </section>
-      <section id="a-sharp-key" class="black-key">
-        <section class="black-keynote">A#</section>
-      </section>
-      <section id="b-key" class="key">
-        <section class="keynote">B</section>
-      </section>
-      <section id="high-c-key" class="key">
-        <div class="keynote">C</div>
-      </section>
+    <section>
+      <h1>piano player</h1>
+      <h2>Follow the song below to play the piano.</h2>
     </section>
 
-    <section id="lyrics">
-      <section id="column-one">
-        <section id="word-one">HAP-</section>
-        <section id="letter-note-one">G</section>
-      </section>
-      <section id="column-two">
-        <section id="word-two">PY</section>
-        <section id="letter-note-two">G</section>
-      </section>
-      <section id="column-three">
-        <section id="word-three">BIRTH-</section>
-        <section id="letter-note-three">A</section>
-      </section>
-      <section id="column-four">
-        <section id="word-four">DAY</section>
-        <section id="letter-note-four">G</section>
-      </section>
-      <section id="column-five">
-        <section id="word-five">TO</section>
-        <section id="letter-note-five">C</section>
-      </section>
-      <section id="column-six">
-        <section id="word-six">YOU</section>
-        <section id="letter-note-six">B</section>
-      </section>
-      <section id="column-optional" class="column-optional">
-        <section id="word-optional">END</section>
-        <section id="letter-note-optional">A</section>
-      </section>
-
-      <button id="first-next-line">Line 2</button>
-      <button id="second-next-line">Line 3</button>
-      <button id="third-next-line">Line 4</button>
-      <button id="fourth-next-line">Reset</button>
+    <section class="key-area">
+      <div class="key" id="key-c">
+        <p class="key-letter" id="key-c-letter">C</p>
+      </div>
+      <div class="sharp" id="key-csharp">
+        <p class="key-sharp-letter" id="key-csharp-letter">C#</p>
+      </div>
+      <div class="key" id="key-d">
+        <p class="key-letter" id="key-d-letter">D</p>
+      </div>
+      <div class="sharp" id="key-dsharp">
+        <p class="key-sharp-letter" id="key-dsharp-letter">D#</p>
+      </div>
+      <div class="key" id="key-e">
+        <p class="key-letter" id="key-e-letter">E</p>
+      </div>
+      <div class="key" id="key-f">
+        <p class="key-letter" id="key-f-letter">F</p>
+      </div>
+      <div class="sharp" id="key-fsharp">
+        <p class="key-sharp-letter" id="key-fsharp-letter">F#</p>
+      </div>
+      <div class="key" id="key-g">
+        <p class="key-letter" id="key-g-letter">G</p>
+      </div>
+      <div class="sharp" id="key-gsharp">
+        <p class="key-sharp-letter" id="key-gsharp-letter">G#</p>
+      </div>
+      <div class="key" id="key-a">
+        <p class="key-letter" id="key-a-letter">A</p>
+      </div>
+      <div class="sharp" id="key-asharp">
+        <p class="key-sharp-letter" id="key-asharp-letter">A#</p>
+      </div>
+      <div class="key" id="key-b">
+        <p class="key-letter" id="key-b-letter">B</p>
+      </div>
+      <div class="key" id="key-cc">
+        <p class="key-letter" id="key-cc-letter">C</p>
+      </div>
     </section>
 
-    <script src="script.js"></script>
+    <section class="lyric-area one">
+      <div class="lyric-boxes">
+        <p class="lyrics" id="lyric-one">HAP-</p>
+        <p class="notes" id="note-one">G</p>
+      </div>
+
+      <div class="lyric-boxes">
+        <p class="lyrics" id="lyric-two">PY</p>
+        <p class="notes" id="note-two">G</p>
+      </div>
+
+      <div class="lyric-boxes">
+        <p class="lyrics" id="lyric-three">BIRTH-</p>
+        <p class="notes" id="note-three">A</p>
+      </div>
+
+      <div class="lyric-boxes">
+        <p class="lyrics" id="lyric-four">DAY</p>
+        <p class="notes" id="note-four">G</p>
+      </div>
+
+      <div class="lyric-boxes">
+        <p class="lyrics" id="lyric-five">TO</p>
+        <p class="notes" id="note-five">C</p>
+      </div>
+
+      <div class="lyric-boxes">
+        <p class="lyrics" id="lyric-six">YOU</p>
+        <p class="notes" id="note-six">B</p>
+      </div>
+
+      <div class="lyric-boxes">
+        <p class="lyrics" id="lyric-seven">END</p>
+        <p class="notes" id="note-seven">A</p>
+      </div>
+
+      <div class="button" id="button-one">
+        <p id="button-text">Line 2</p>
+      </div>
+      <div class="button" id="button-two">
+        <p id="button-text">Line 3</p>
+      </div>
+      <div class="button" id="button-three">
+        <p id="button-text">Line 4</p>
+      </div>
+      <div class="button" id="button-four">
+        <p id="button-text">RETURN</p>
+      </div>
+    </section>
   </body>
 </html>
