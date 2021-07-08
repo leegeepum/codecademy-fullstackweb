@@ -1,91 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik"
+      rel="stylesheet"
+    />
+    <title>Forms Review</title>
   </head>
-
   <body>
-    <p class="title">Piano Player</p>
-    <p id="demo">Follow the song below to play the piano.</p>
-    <section class="piano">
-      <section id="c-key" class="key">
-        <section class="keynote">C</section>
-      </section>
-      <section id="c-sharp-key" class="black-key">
-        <section class="black-keynote">C#</section>
-      </section>
-      <section id="d-key" class="key">
-        <section class="keynote">D</section>
-      </section>
-      <section id="d-sharp-key" class="black-key">
-        <section class="black-keynote">D#</section>
-      </section>
-      <section id="e-key" class="key">
-        <section class="keynote">E</section>
-      </section>
-      <section id="f-key" class="key">
-        <section class="keynote">F</section>
-      </section>
-      <section id="f-sharp-key" class="black-key">
-        <section class="black-keynote">F#</section>
-      </section>
-      <section id="g-key" class="key">
-        <section class="keynote">G</section>
-      </section>
-      <section id="g-sharp-key" class="black-key">
-        <section class="black-keynote">G#</section>
-      </section>
-      <section id="a-key" class="key">
-        <section class="keynote">A</section>
-      </section>
-      <section id="a-sharp-key" class="black-key">
-        <section class="black-keynote">A#</section>
-      </section>
-      <section id="b-key" class="key">
-        <section class="keynote">B</section>
-      </section>
-      <section id="high-c-key" class="key">
-        <div class="keynote">C</div>
-      </section>
+    <section id="overlay">
+      <img
+        src="https://content.codecademy.com/courses/web-101/unit-6/htmlcss1-img_burger-logo.svg"
+        alt="Davie's Burgers Logo"
+        id="logo"
+      />
+      <hr />
+      <form action="submission.html" method="POST">
+        <h1>Create a burger!</h1>
+        <section class="protein">
+          <label for="patty">What type of protein would you like?</label>
+          <input type="text" name="patty" id="patty" />
+        </section>
+        <hr />
+
+        <section class="patties">
+          <label for="amount">How many patties would you like?</label>
+          <input type="number" name="amount" id="amount" />
+        </section>
+        <hr />
+
+        <section class="cooked">
+          <label for="doneness">How do you want your patty cooked</label>
+          <br />
+          <span>Rare</span>
+          <input
+            type="range"
+            name="doneness"
+            id="doneness"
+            value="3"
+            min="1"
+            max="5"
+          />
+          <span>Well-Done</span>
+        </section>
+        <hr />
+
+        <section class="toppings">
+          <span>What toppings would you like?</span>
+          <br />
+          <input type="checkbox" name="topping" id="lettuce" value="lettuce" />
+          <label for="lettuce">Lettuce</label>
+          <input type="checkbox" name="topping" id="tomato" value="tomato" />
+          <label for="tomato">Tomato</label>
+          <input type="checkbox" name="topping" id="onion" value="onion" />
+          <label for="onion">Onion</label>
+        </section>
+        <hr />
+
+        <section class="cheesy">
+          <span>Would you like to add cheese?</span>
+          <br />
+          <input type="radio" name="cheese" id="yes" value="yes" />
+          <label for="yes">Yes</label>
+          <input type="radio" name="cheese" id="no" value="yes" />
+          <label for="no">No</label>
+        </section>
+        <hr />
+
+        <section class="bun-type">
+          <label for="bun">What type of bun would you like?</label>
+          <select name="bun" id="bun">
+            <option value="sesame">Sesame</option>
+            <option value="potatoe">Potato</option>
+            <option value="pretzel">Pretzel</option>
+          </select>
+        </section>
+        <hr />
+
+        <section class="sauce-selection">
+          <label for="sauce">What type of sauce would you like?</label>
+          <input list="sauces" id="sauce" name="sauce" />
+          <datalist id="sauces">
+            <option value="ketchup"></option>
+            <option value="mayo"></option>
+            <option value="mustard"></option>
+          </datalist>
+        </section>
+        <hr />
+        <section class="extra-info">
+          <label for="extra">Anything else you want to add?</label>
+          <br />
+          <textarea id="extra" name="extra" rows="3" cols="40"></textarea>
+        </section>
+        <hr />
+
+        <section class="submission">
+          <input type="submit" value="Submit" />
+        </section>
+      </form>
     </section>
-
-    <section id="lyrics">
-      <section id="column-one">
-        <section id="word-one">HAP-</section>
-        <section id="letter-note-one">G</section>
-      </section>
-      <section id="column-two">
-        <section id="word-two">PY</section>
-        <section id="letter-note-two">G</section>
-      </section>
-      <section id="column-three">
-        <section id="word-three">BIRTH-</section>
-        <section id="letter-note-three">A</section>
-      </section>
-      <section id="column-four">
-        <section id="word-four">DAY</section>
-        <section id="letter-note-four">G</section>
-      </section>
-      <section id="column-five">
-        <section id="word-five">TO</section>
-        <section id="letter-note-five">C</section>
-      </section>
-      <section id="column-six">
-        <section id="word-six">YOU</section>
-        <section id="letter-note-six">B</section>
-      </section>
-      <section id="column-optional" class="column-optional">
-        <section id="word-optional">END</section>
-        <section id="letter-note-optional">A</section>
-      </section>
-
-      <button id="first-next-line">Line 2</button>
-      <button id="second-next-line">Line 3</button>
-      <button id="third-next-line">Line 4</button>
-      <button id="fourth-next-line">Reset</button>
-    </section>
-
-    <script src="script.js"></script>
   </body>
 </html>
