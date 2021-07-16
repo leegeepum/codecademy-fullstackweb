@@ -1,95 +1,126 @@
-/* Universal Styles */
+/* Universal */
+
 body {
-  margin: 0px;
-  background-color: whitesmoke;
-  font-family: "Rock Salt", cursive;
-  text-align: center;
+  background-color: black;
+  color: seashell;
+  font-size: 22px;
+  opacity: 0.9;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 1000px;
 }
 
-.secondary-background {
-  background-color: snow;
-}
+/* Nav Bar */
 
-.tagline {
-  font-family: "Quicksand", sans-serif;
-  color: lightslategrey;
-  line-height: 125px;
-}
-
-/* Header */
-h1 {
-  margin: 0;
-  background-color: steelblue;
-  line-height: 100px;
-  color: khaki;
-}
-
-h2 {
-  margin: 10px;
-}
-
-/* App Container */
-.container {
-  border: 2px solid snow;
+header {
   display: flex;
+  height: 69px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid seashell;
 }
 
-/* To Do Section */
-.week {
+ul {
   display: inline-flex;
-  flex-grow: 3;
+  justify-content: end;
+}
+
+li {
+  margin: 0 25px;
+  list-style-type: none;
+  text-decoration: underline;
+}
+
+/* content  */
+
+.content {
+  display: inline-flex;
   flex-direction: column;
 }
 
-.row {
-  min-height: 200px;
+/* mission area  */
+
+.mission-area {
+  background-image: url(./img/img-mission-background.jpg);
+  height: 700px;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mission-text {
+  text-align: center;
+  background-color: black;
+}
+
+/* tea area  */
+
+.tea-area {
+  margin-top: 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.tea-image-space {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
 }
 
-.square {
-  width: 125px;
-  height: 125px;
-  padding: 10px;
+.tea-image-area {
+  margin: 10px;
+}
+
+.tea-image {
+  width: 300px;
+  height: 200px;
+}
+
+p {
+  margin: 10px auto 20px;
+}
+
+/* last */
+
+.last {
+  background-image: url(./img/img-locations-background.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 500px;
+}
+
+.last-title {
+  margin-top: 50px;
+}
+
+.boxes {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.day.square {
-  background-color: steelblue;
-  border: 1px solid white;
+.box {
+  background-color: black;
+  width: 300px;
+  padding: 50px auto;
+  text-align: center;
+  margin: 0 20px;
 }
 
-.task.square {
-  background-color: khaki;
-  border: 1px solid white;
-}
-
-.task p {
-  font-family: "Quicksand", sans-serif;
-  font-weight: 700;
-  font-size: 12px;
-}
-
-/* Reminders */
-.reminders {
-  background-color: khaki;
-  display: inline-flex;
-  flex-grow: 2;
-}
-
-.reminders h3 {
-  width: 100%;
-  margin: 10px;
-  color: black;
-  line-height: 90px;
-  font-size: 24px;
-}
-
-/* Footer */
 footer {
-  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.copyright {
+  width: 100%;
+  font-size: 15px;
+  margin-left: 10px;
 }

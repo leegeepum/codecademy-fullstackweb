@@ -1,71 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>To Do App</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tea Cozy</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Quicksand"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Rock+Salt"
-      rel="stylesheet"
-    />
   </head>
   <body>
-    <!-- Header -->
-    <div id="header">
-      <h1>To Do or Not To Do</h1>
-      <h2 class="tagline">(your priorities at a glance)</h2>
-    </div>
+    <header>
+      <img src="./img/img-tea-cozy-logo.webp" alt="logo" height="50px" />
+      <nav class="nav">
+        <ul class="nav-ul">
+          <li>Mission</li>
+          <li>Featured Tea</li>
+          <li>Locations</li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- App Container -->
-    <div class="container">
-      <!-- To Do Section -->
-      <div class="week">
-        <div class="row secondary-background">
-          <div class="day square"><h3>MON</h3></div>
-          <div class="task square">
-            <p>Insert some information about your week here :)</p>
-          </div>
-          <div class="task square"></div>
-          <div class="task square"></div>
-        </div>
-        <div class="row">
-          <div class="day square"><h3>TUE</h3></div>
-          <div class="task square"></div>
-          <div class="task square"></div>
-          <div class="task square"></div>
-        </div>
-        <div class="row secondary-background">
-          <div class="day square"><h3>WED</h3></div>
-          <div class="task square"></div>
-          <div class="task square"></div>
-          <div class="task square"></div>
-        </div>
-        <div class="row">
-          <div class="day square"><h3>THU</h3></div>
-          <div class="task square"></div>
-          <div class="task square"></div>
-          <div class="task square"></div>
-        </div>
-        <div class="row secondary-background">
-          <div class="day square"><h3>FRI</h3></div>
-          <div class="task square"></div>
-          <div class="task square"></div>
-          <div class="task square"></div>
-        </div>
-      </div>
+    <section class="content">
+      <section class="mission-area">
+        <section class="mission-text">
+          <h2>Our Mission</h2>
+          <h4>
+            Handpicked, Artisanally Curated, Free Rnage, Sustainable, Small
+            Batch, Fair Trade, Organic Tea
+          </h4>
+        </section>
+      </section>
 
-      <!-- Reminders Section -->
-      <div class="reminders">
-        <h3>Reminders</h3>
-      </div>
-    </div>
+      <section class="tea-area">
+        <section class="tea-title">
+          <h2>Tea of the Month</h2>
+          <h4>What's Steeping at The Tea Cozy?</h4>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-      <span class="tagline">copyright nottodo.com</span>
-    </footer>
+        <section class="tea-image-space">
+          <section class="tea-image-area">
+            <img class="tea-image" src="./img/img-berryblitz.webp" alt="" />
+            <p>Fall Berry Blitz Tea</p>
+          </section>
+          <section class="tea-image-area">
+            <img class="tea-image" src="./img/img-spiced-rum.webp" alt="" />
+            <p>Spiced Rum Tea</p>
+          </section>
+          <section class="tea-image-area">
+            <img class="tea-image" src="./img/img-donut.jpg" alt="" />
+            <p>Seasonal Donuts</p>
+          </section>
+          <section class="tea-image-area">
+            <img class="tea-image" src="./img/img-myrtle-ave.jpg" alt="" />
+            <p>Myrtle Ave Tea</p>
+          </section>
+          <section class="tea-image-area">
+            <img class="tea-image" src="./img/img-bedford-bizarre.jpg" alt="" />
+            <p>Bedford Bizarre Tea</p>
+          </section>
+        </section>
+      </section>
+
+      <section class="last">
+        <section class="last-title">
+          <h2>Locations</h2>
+        </section>
+        <section class="boxes">
+          <section class="box">
+            <h4>Downtown</h4>
+            <p>384 West 4th St</p>
+            <p>Suite 108</p>
+            <p>Portland, Maine</p>
+          </section>
+          <section class="box">
+            <h4>East Bayside</h4>
+            <p>3433 Phisherman's Avenue</p>
+            <p>(Northwest Corner)</p>
+            <p>Portland, Maine</p>
+          </section>
+          <section class="box">
+            <h4>Oakdale</h4>
+            <p>515 Crescent Avenue</p>
+            <p>Second Floor</p>
+            <p>Portland, Maine</p>
+          </section>
+        </section>
+      </section>
+
+      <footer>
+        <h2>The Tea Cozy</h2>
+        <h5>contact@theteacozy.com</h5>
+        <h5>917-555-8904</h5>
+        <section class="copyright">
+          <p>&copy; The Tea Cozy 2017</p>
+        </section>
+      </footer>
+    </section>
   </body>
 </html>
