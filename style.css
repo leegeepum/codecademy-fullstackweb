@@ -1,125 +1,95 @@
-html,
+/* Universal Styles */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Libre Baskerville", sans-serif;
-}
-
-img {
-  margin: 10px auto;
-  height: auto;
-  width: auto;
-}
-
-ul {
-  text-align: right;
-}
-
-h1 {
-  font-size: 20px;
-}
-
-/*Sizing*/
-
-.container {
-  margin: 0 auto;
-}
-
-.spacer {
-  max-width: 1200px;
-  margin: auto;
-}
-
-.main {
-  background-color: #ffc200;
-}
-
-/*Header Section*/
-
-.header {
-  padding: 30px 0px 40px;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-
-.header li {
-  list-style: none;
-  display: inline-block;
-}
-
-.header li a {
-  color: #333;
-  margin: 0;
-  border: 0px;
-}
-
-/*Jumbotron Section*/
-
-.jumbotron {
-  background-color: #fff;
-  max-width: 1200px;
-  margin-left: 50px;
-}
-
-.jumbotron h2 {
-  font-size: 50px;
-  margin-bottom: 70px;
-}
-
-.jumbotron h2 span {
-  color: #ffc200;
-}
-
-.jumbotron p {
-  text-shadow: 0 0;
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 0;
-}
-
-/*Banner Section*/
-.banner {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
+  margin: 0px;
+  background-color: whitesmoke;
+  font-family: "Rock Salt", cursive;
   text-align: center;
 }
 
-/*Expertise Section*/
-.cards {
-  background-color: #ffc200;
+.secondary-background {
+  background-color: snow;
+}
+
+.tagline {
+  font-family: "Quicksand", sans-serif;
+  color: lightslategrey;
+  line-height: 125px;
+}
+
+/* Header */
+h1 {
+  margin: 0;
+  background-color: steelblue;
+  line-height: 100px;
+  color: khaki;
+}
+
+h2 {
+  margin: 10px;
+}
+
+/* App Container */
+.container {
+  border: 2px solid snow;
+  display: flex;
+}
+
+/* To Do Section */
+.week {
+  display: inline-flex;
+  flex-grow: 3;
+  flex-direction: column;
+}
+
+.row {
+  min-height: 200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
 }
 
-.col {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: space-between;
+.square {
+  width: 125px;
+  height: 125px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#expertise {
-  padding: 20px;
-  background-color: #ffc200;
-  margin: 0;
-  text-align: center;
+.day.square {
+  background-color: steelblue;
+  border: 1px solid white;
 }
 
-/*Footer Section*/
-.footer {
-  padding: 60px 0px;
-  background-color: #000;
-  color: #fff;
+.task.square {
+  background-color: khaki;
+  border: 1px solid white;
 }
 
-.footer h3 {
-  font-size: 20px;
-  margin-left: 20px;
-}
-
-.footer p {
+.task p {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
   font-size: 12px;
-  margin-bottom: 0;
-  margin-left: 20px;
+}
+
+/* Reminders */
+.reminders {
+  background-color: khaki;
+  display: inline-flex;
+  flex-grow: 2;
+}
+
+.reminders h3 {
+  width: 100%;
+  margin: 10px;
+  color: black;
+  line-height: 90px;
+  font-size: 24px;
+}
+
+/* Footer */
+footer {
+  font-size: 24px;
 }
